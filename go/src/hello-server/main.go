@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"./handler"
+	"github.com/Ras96/backend-practice/go/src/hello-server/handler"
 )
 
 func main() {

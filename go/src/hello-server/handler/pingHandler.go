@@ -7,5 +7,5 @@ import (
 )
 
 func GetPingHandler(c echo.Context) error {
-	return c.String(http.StatusOK, "pong")
+	return c.String(http.StatusOK, "pong\n")
 }

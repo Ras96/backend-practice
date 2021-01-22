@@ -9,6 +9,9 @@ import (
 
 func GetFizzbuzzHandler(c echo.Context) error {
 	q := c.QueryParam("count")
+	if q == "" {
+		q = "30"
+	}
 	cnt, err := strconv.Atoi(q)
 	if err != nil {
 		return c.String(http.StatusBadRequest, "\"count\" is not integer.")
