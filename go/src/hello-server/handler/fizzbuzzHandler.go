@@ -7,7 +7,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func fizzbuzzHandler(c echo.Context) error {
+func GetFizzbuzzHandler(c echo.Context) error {
 	q := c.QueryParam("count")
 	cnt, err := strconv.Atoi(q)
 	if err != nil {

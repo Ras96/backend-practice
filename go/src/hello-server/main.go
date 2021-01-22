@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/Ras96/backend-practice/handler"
+	"./handler"
 )
 
 func main() {
@@ -16,10 +16,10 @@ func main() {
 	}
 	e.GET("/ping", handler.GetPingHandler)
 	e.GET("/ras", handler.GetRasHandler)
-	e.GET("/json", handler.jsonHandler)
-	e.GET("/fizzbuzz", handler.fizzbuzzHandler)
+	e.GET("/json", handler.GetJsonHandler)
+	e.GET("/fizzbuzz", handler.GetFizzbuzzHandler)
 	e.GET("/students/:class/:studentNumber", handler.GetStudentNumberHandler)
-	e.POST("/add", handler.addHandler)
+	e.POST("/add", handler.GetAddHandler)
 
 	e.Logger.Fatal(e.Start(":4000"))
 }

@@ -11,7 +11,7 @@ type Add struct {
 	Left  int
 }
 
-func addHandler(c echo.Context) error {
+func GetAddHandler(c echo.Context) error {
 	a := new(Add)
 	if err := c.Bind(&a); err != nil {
 		return c.JSON(

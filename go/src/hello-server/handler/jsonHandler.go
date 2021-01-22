@@ -12,7 +12,7 @@ type jsonData struct {
 	Bool   bool   `json:"bool,omitempty"`
 }
 
-func jsonHandler(c echo.Context) error {
+func GetJsonHandler(c echo.Context) error {
 	res := jsonData{
 		Number: 10,
 		String: "hoge",
